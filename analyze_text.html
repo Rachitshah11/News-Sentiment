@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analyze Text</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Analyze Text Sentiment</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="text">Enter Text:</label>
+            <textarea id="text" name="text" rows="4" cols="50"></textarea>
+            <button type="submit">Analyze</button>
+        </form>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'analyze_csv' %}">Analyze News CSV</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+    </div>
+</body>
+</html>
